@@ -1,4 +1,4 @@
-import { useGlobalState } from "./lib/state/useGlobalState";
+import { useGlobalState } from "./store/appStore";
 
 export const Profile = () => {
     const { profile, logout, login } = useGlobalState<any>((state) => (

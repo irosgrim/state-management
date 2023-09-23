@@ -1,7 +1,7 @@
-import { useGlobalState } from "./lib/state/useGlobalState";
+import { TodoState, useTodoState } from "./store/todoStore";
 
 export const Todos = () => {
-    const { todos } = useGlobalState<any>((state) => ({ todos: state.todos }));
+    const { todos } = useTodoState<Pick<TodoState, "todos">>((state) => ({ todos: state.todos }));
 
     return (
         <>

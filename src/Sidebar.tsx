@@ -1,12 +1,11 @@
-// @ts-nocheck
 
-import { useState } from "react";
-import { useGlobalState } from "./lib/state/useGlobalState";
-
-
+import { useEffect, useState } from "react";
+import { useGlobalState } from "./store/appStore";
+import { AppState } from "./store/types";
+import { Info } from "./Info";
 
 const Menu = ({ data, setSelection, depth = 0, path = [] }: any) => {
-    const [expandedKeys, setExpandedKeys] = useState([]);
+    const [expandedKeys, setExpandedKeys] = useState<string[]>([]);
 
     const handleClick = (path: any, key: any, hasChildren: any) => {
         if (hasChildren) {
@@ -32,7 +31,7 @@ const Menu = ({ data, setSelection, depth = 0, path = [] }: any) => {
 
     return (
         <ul style={{ paddingLeft: depth * 8 }}>
-            {Object.entries(data).map(([key, value], index) => (
+            {data && Object.entries(data).map(([key, value], index) => (
                 <li key={index}>
                     <div onClick={() => handleClick([...path, key], key, !!Object.keys(value).length)}>
                         {key}
@@ -50,9 +49,14 @@ export const Sidebar = () => {
     const [selection, setSelection] = useState({});
     const { menu, getMenu } = useGlobalState((state) => ({ menu: state.menu, getMenu: state.getMenu }));
 
+    useEffect(() => {
+        getMenu();
+    }, []);
+
     return (
         <div className="sidebar">
             <div>
+                <Info />
                 <div>
                     <h2> Countries::</h2>
                     <button onClick={() => getMenu("sweden")}>Sweden</button>

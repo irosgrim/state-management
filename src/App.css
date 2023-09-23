@@ -67,3 +67,7 @@ main {
   padding: 2em;
   flex: 1;
 }
+
+.border {
+  border: 1px solid #acacac;
+}
