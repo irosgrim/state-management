@@ -12,7 +12,7 @@ export const appState: AppState = {
     const { count } = globalState.getState();
     globalState.setState({count: count + n});
   },
-  setSelection: (selectedItems: number[]) => {
+  setSelection: (selectedItems: string[]) => {
     globalState.setState({selection: selectedItems})
   },
   greet: (name: string) => `Hello ${name}`,

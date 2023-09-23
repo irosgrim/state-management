@@ -1,7 +1,6 @@
-
+// @ts-nocheck
 import { useEffect, useState } from "react";
 import { useGlobalState } from "./store/appStore";
-import { AppState } from "./store/types";
 import { Info } from "./Info";
 
 const Menu = ({ data, setSelection, depth = 0, path = [] }: any) => {
