@@ -1,0 +1,64 @@
+{
+    "sweden": {
+        "helsingborg": [
+            "Laröd",
+            "Lunnom",
+            "Lydestad",
+            "Pålsjö",
+            "Tågarp",
+            "Väla",
+            "Viken"
+        ],
+        "stockholm": [
+            "Botkyrka",
+            "Danderyds",
+            "Ekerö"
+        ],
+        "gothenburg": [
+            "Majorna",
+            "Torslanda",
+            "Billdal"
+        ],
+        "malmo": [
+            "Oxie",
+            "Käglinge",
+            "Sege"
+        ]
+    },
+    "denmark": {
+        "copenhagen": [
+            "Frederiksberg",
+            "Norrebro",
+            "Vesterbro"
+        ],
+        "aarhus": [
+            "Bispehaven",
+            "Skjoldhøj",
+            "Tilst"
+        ]
+    },
+    "norway": {
+        "oslo": [
+            "Grünerløkka",
+            "Frogner",
+            "St. Hanshaugen"
+        ],
+        "bergen": [
+            "Arna",
+            "Fana",
+            "Ytrebygda"
+        ]
+    },
+    "finland": {
+        "helsinki": [
+            "Kallio",
+            "Töölö",
+            "Kamppi"
+        ],
+        "turku": [
+            "Maaria-Paattinen",
+            "Varissuo",
+            "Runosmäki"
+        ]
+    }
+}
